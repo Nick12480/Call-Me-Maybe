@@ -1,0 +1,62 @@
+Grading against private set (11 tests)
+--------------------------------------------------------------------------------
+
++------------------------------------------------------------+
+|                         Test 1/11                          |
++------------------------------------------------------------+
+Prompt: What is the product of 3 and 5?
+>>> VALID <<<
+
++------------------------------------------------------------+
+|                         Test 2/11                          |
++------------------------------------------------------------+
+Prompt: What is the product of 12 and 4?
+>>> VALID <<<
+
++------------------------------------------------------------+
+|                         Test 3/11                          |
++------------------------------------------------------------+
+Prompt: Is 4 an even number?
+  [EXPECTED] Expected prompt: Is 4 an even number?
+  [GOT]      Student prompt: Execute SQL query 'SELECT * FROM users' on the production database
+>>> INVALID: prompt mismatch <<<
+
++------------------------------------------------------------+
+|                         Test 4/11                          |
++------------------------------------------------------------+
+Prompt: Is 7 an even number?
+  [EXPECTED] Expected prompt: Is 7 an even number?
+  [GOT]      Student prompt: Read the file at /home/user/data.json with utf-8 encoding
+>>> INVALID: prompt mismatch <<<
+
++------------------------------------------------------------+
+|                         Test 5/11                          |
++------------------------------------------------------------+
+Prompt: Calculate compound interest on 1234567.89 at 0.0375 rate for 23 years
+  [EXPECTED] Expected prompt: Calculate compound interest on 1234567.89 at 0.0375 rate for 23 years
+  [GOT]      Student prompt: Read C:\Users\john\config.ini with latin-1 encoding
+>>> INVALID: prompt mismatch <<<
+
++------------------------------------------------------------+
+|                         Test 6/11                          |
++------------------------------------------------------------+
+Prompt: Execute SQL query 'SELECT * FROM users' on the production database
+  [EXPECTED] Expected prompt: Execute SQL query 'SELECT * FROM users' on the production database
+  [GOT]      Student prompt: Format template: Hello {user}'s profile!
+>>> INVALID: prompt mismatch <<<
+
++------------------------------------------------------------+
+|                         Test 7/11                          |
++------------------------------------------------------------+
+Prompt: Run the query 'INSERT INTO logs VALUES (1, 2, 3)' on the system database
+  [EXPECTED] Expected prompt: Run the query 'INSERT INTO logs VALUES (1, 2, 3)' on the system database
+  [GOT]      Student prompt: Format template: Say "hello" to {name}
+>>> INVALID: prompt mismatch <<<
+
++============================================+
+|                                            |
+|                   FAILED                   |
+|            SCORE: 2/11 (18.2%)             |
+|                                            |
++============================================+
+
